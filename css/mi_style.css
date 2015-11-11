@@ -1,0 +1,13 @@
+#mapa
+{
+width: 800px;
+height: 800px;
+float: left;
+background: gray;
+}
+#infor{
+width: 600px;
+height: 600px;
+float: left;
+
+}

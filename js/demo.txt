@@ -1,0 +1,19 @@
+$("#collapseTwo").collapse("show");
+$("#collapseOne").collapse("hide");
+
+//pasar informacion del marcador al formulario
+formulario_edicion.find("input[name='id']").val(marca.idMarcador);
+formulario_edicion.find("input[name='titulo']").val(marca.titulo).focus();
+formulario_edicion.find("input[name='cx']").val(marca.cx);
+formulario_edicion.find("input[name='cy']").val(marca.cy);
+
+
+var objhtml={ content: "div style='height:150px;width:300px'>\n\
+<h2>Nombre del lugar</h2><h3>informacion del lugar</h3>\n\
+<p>Mas Info<a href='#'>nombre del lugar</a></p></div>"}
+var glW= new google.maps.InfoWindow(objhtml);
+google.maps.event.addListener(marca, "click", function(){
+
+glW.open(mapa,marca);
+
+});

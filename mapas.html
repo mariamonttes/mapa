@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="css/mi_style.css" rel="stylesheet" type="text/css" />
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<script src="https://maps.googleapis.com/maps/api/js?sensor=false"> </script>
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/funciones.js"></script>
+	</head>
+	<body>
+	<div id="mapa">
+	<h2></h2>
+	</div>
+	
+	<div id="infor">
+	<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingOne">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+         Agregar
+        </a>
+      </h4>
+    </div>
+    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+      <div class="panel-body">
+   <form id="formulario">
+   <table>
+   <tr>
+   <td>Nombre: </td>
+   <td><input type="text" name="titulo" autocomplete="off" class="form-control"/></td>
+   </tr>
+ 
+  
+   
+   <tr>
+   <td>Coordenada X: </td>
+   <td><input type="text" name="cx" autocomplete="off" class="form-control" readonly /></td>
+   </tr>
+   
+   <tr>
+   <td>Coordenada Y: </td>
+   <td><input type="text" name="cy" autocomplete="off" class="form-control" readonly /></td>
+   </tr>
+   
+   <tr>
+   <td>Foto: </td>
+   <td><input type="text" name="fo" autocomplete="off" class="form-control"/></td>
+   </tr>
+  
+   <tr>
+   <td></td>
+   <td><span  id="loader_grabar" class=""></span></td>
+   </tr>
+   
+   <tr>
+   <td><button type="button" id="btn_grabar" class="btn btn-success">Guardar</button></td>
+   <td><button type="button" class="btn btn-danger">Cancelar</button></td>
+   </tr>
+   </table>
+   </form>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingTwo">
+      <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Edicion
+        </a>
+      </h4>
+    </div>
+    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+      <div class="panel-body">
+	  
+	  
+	  
+	  <form id="formulario_edicion">
+	  <input type="hidden" name="id"/>
+   <table>
+   <tr>
+   
+     <td>Nombre: </td>
+   <td><input type="text" name="titulo" autocomplete="off" class="form-control"/></td>
+   </tr>
+           
+   <tr>
+   <td>Coordenada X: </td>
+   <td><input type="text" name="cx" autocomplete="off" class="form-control" readonly /></td>
+   </tr>
+   
+   <tr>
+   <td>Coordenada Y: </td>
+   <td><input type="text" name="cy" autocomplete="off" class="form-control" readonly /></td>
+   </tr>
+   
+   <tr>
+   <td>Foto: </td>
+   <td><input type="text" name="fo" autocomplete="off" class="form-control"/></td>
+   </tr>
+   
+   <tr>
+   <td></td>
+   <td><span  id="loader_grabar" class=""></span></td>
+   </tr>
+   
+   
+   <tr>
+   <td>&nbsp;&nbsp;&nbsp;<button type="button" id="btn_actualizar" class="btn btn-success">Actualizar</button></td>
+   <td>&nbsp;&nbsp;&nbsp;<button type="button" id="btn_borrar" class="btn btn-danger">Borrar</button></td>
+   </tr>
+   </table>
+   </form>
+      </div>
+    </div>
+  </div>
+  </div>
+	</body>
+	</html>
